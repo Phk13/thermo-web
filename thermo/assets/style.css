@@ -1,0 +1,103 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background-color: #F7F7F7;
+}
+
+.header {
+    background-color: #222222;
+    height: 330px;
+    padding: 16px 0 0 0;
+}
+
+.header-logo {
+    height: 35%;
+    margin: 0 auto;
+    display: block;
+}
+
+.header-title {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-reading-wrapper {
+    display: flex;
+    max-width: 912px;
+    height: 80px;
+    margin: 0 auto 0 auto;
+}
+
+.header-reading-status {
+    position: fixed;
+    width: 75px;
+    left: 25px;
+    top: 25px;
+}
+
+.header-reading-block {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin: 10px;
+}
+
+.header-reading-icon {
+    padding: 5px;
+}
+
+.header-reading-value {
+    color: #CFCFCF;
+    margin: 0 auto 0 0;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 32px;
+}
+
+.card {
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.menu {
+    height: 112px;
+    max-width: 912px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    margin: -70px auto 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.Select-control {
+    width: 256px;
+    height: 48px;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    line-height: 48px;
+}
+
+.Select--multi .Select-value-label {
+    line-height: 32px;
+}
+
+.menu-title {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #FF6839;
+}

@@ -1,0 +1,4 @@
+/config_template/
+/venv/
+/.env
+/.idea/
