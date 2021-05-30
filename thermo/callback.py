@@ -22,6 +22,7 @@ def update_last_read(n):
     [Input("date-range", "start_date"), Input("date-range", "end_date")],
 )
 def update_charts(start_date, end_date):
+    end_date = f'{end_date}T23:59:59'if len(end_date) < 11 else end_date
     data = find_date_reading(start_date, end_date)
 
     temperature_chart_figure = {

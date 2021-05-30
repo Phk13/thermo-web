@@ -45,10 +45,13 @@ def thermo_layout():
                             dcc.DatePickerRange(
                                 id="date-range",
                                 display_format='YYYY/MM/DD',
+                                first_day_of_week=1,
                                 min_date_allowed="2021-03-01",
                                 max_date_allowed=datetime.now(),
                                 start_date=datetime.now().replace(hour=0, minute=0, second=0) - timedelta(days=7),
                                 end_date=datetime.now().replace(hour=23, minute=59, second=59),
+                                persistence=True,
+                                persisted_props=['start_date', 'end_date'],
                             ),
                         ]
                     ),
