@@ -5,10 +5,12 @@ import requests
 
 
 def get_live_reading():
-    reading = requests.get(SENSOR_URI)
-    if reading.status_code == 200:
-        return reading
-    return None
+    try:
+        reading = requests.get(SENSOR_URI)
+        if reading.status_code == 200:
+            return reading
+    except requests.exceptions.ConnectionError:
+        return None
 
 
 def get_last_readings():
