@@ -119,6 +119,7 @@ body {
     transition: all 0.2s;
     border: none;
     font-weight: bold;
+    cursor:pointer;
 }
 
 .menu button:hover {
