@@ -53,8 +53,11 @@ def thermo_layout():
                                 persistence=True,
                                 persisted_props=['start_date', 'end_date'],
                             ),
-                        ]
+                        ], className="menu-range",
                     ),
+                    html.Div(children=
+                             html.Button('Reset', id='reset-dates', n_clicks=0),
+                             className="menu-reset"),
                 ], className="menu",
             ),
             html.Div(

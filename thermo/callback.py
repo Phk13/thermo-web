@@ -1,7 +1,7 @@
 from thermo.app import app
 from dash.dependencies import Output, Input
 from thermo.data import find_date_reading, get_live_reading
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 @app.callback(
@@ -72,3 +72,13 @@ def update_charts(start_date, end_date):
         },
     }
     return temperature_chart_figure, humidity_chart_figure, pressure_chart_figure, datetime.now()
+
+
+@app.callback(
+    [Output("date-range", "start_date"), Output("date-range", "end_date")],
+    Input('reset-dates', 'n_clicks')
+)
+def reset_dates(n_clicks):
+    start_date = datetime.now().replace(hour=0, minute=0, second=0) - timedelta(days=7)
+    end_date = datetime.now().replace(hour=23, minute=59, second=59)
+    return start_date, end_date
