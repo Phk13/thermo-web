@@ -7,4 +7,4 @@ COPY . /app
 WORKDIR /app
 RUN ["chmod", "a+rx", "/app/gunicorn.sh"]
 EXPOSE 80
-ENTRYPOINT ["./gunicorn.sh"]
+ENTRYPOINT ["sh", "/app/gunicorn.sh"]
